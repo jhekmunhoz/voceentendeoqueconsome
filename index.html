@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#faf8ef">
+  <meta name="description" content="Explore embalagens ilustradas e descubra o que significam as informações dos rótulos de produtos de origem animal.">
+  <title>Você entende o que consome? | Início</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="css/style.css"><script type="module" src="js/main.js"></script>
+</head>
+<body>
+<a class="skip" href="#principal">Pular para o conteúdo</a>
+<header><div class="wrap header-inner">
+  <a class="brand" href="#inicio" aria-label="Você entende o que consome? Início"><svg aria-hidden="true"><use href="assets/icons.svg#tag"/></svg><span>Você entende<br>o que consome?</span></a>
+  <nav id="navigation" aria-label="Navegação principal"><a href="#inicio" aria-current="location">Início</a><a href="#explorar">Explore os rótulos</a><a href="#aprender">Aprenda</a><a href="#sobre">Sobre o projeto</a></nav>
+  <div class="tools"><button id="search-open" class="icon-btn" aria-label="Buscar assuntos"><svg class="icon"><use href="assets/icons.svg#search"/></svg></button><button id="access-open" class="icon-btn" aria-label="Ajustar acessibilidade"><svg class="icon"><use href="assets/icons.svg#access"/></svg></button><button id="menu" class="icon-btn" aria-label="Menu de navegação" aria-expanded="false" aria-controls="navigation"><svg class="icon"><use href="assets/icons.svg#menu"/></svg></button></div>
+</div></header>
+<main id="principal">
+  <section class="hero" id="inicio" aria-labelledby="hero-title"><div class="wrap hero-inner">
+    <div class="lead"><p class="kicker"><svg class="icon"><use href="assets/icons.svg#leaf"/></svg> Educação alimentar</p>
+      <h1 id="hero-title">Você sabe o que<br>está <em>consumindo?</em></h1>
+      <p class="intro">Explore as embalagens e descubra o que cada informação do rótulo significa!</p>
+      <div class="actions"><a class="btn primary" href="#explorar">Explorar embalagens <svg class="icon"><use href="assets/icons.svg#arrow"/></svg></a><a class="btn secondary" href="#aprender"><svg class="icon"><use href="assets/icons.svg#book"/></svg> Como funciona</a></div>
+    </div>
+    <div class="exhibit"><div class="scene" aria-label="Caixa de leite com três pontos para explorar">
+      <div class="sun"></div><div class="orbit"></div>
+      <svg class="sprig" viewBox="0 0 65 68" aria-hidden="true"><g fill="none" stroke="#65845d" stroke-width="2.1" stroke-linecap="round"><path d="M8 62Q27 31 49 8M18 48Q1 30 13 20q13 12 8 23m8-11q-6-19 6-26 8 14-3 23m3-6q7-19 24-17-4 15-21 18M21 45q13-17 29-11-7 14-27 14"/></g></svg>
+      <span class="spark s1" aria-hidden="true">✧</span><span class="spark s2" aria-hidden="true">✧</span>
+      <div class="carton"><img src="assets/images/leite-destaque.webp" alt="Caixa ilustrada de leite integral UHT, com tampa verde e uma paisagem de pasto no rótulo." fetchpriority="high">
+        <button class="pin p1" data-topic="nome" aria-label="Explorar denominação do produto">+</button><button class="pin p2" data-topic="tabela" aria-label="Explorar informação nutricional">+</button><button class="pin p3" data-topic="volume" aria-label="Explorar quantidade de produto">+</button>
+      </div>
+      <div class="annotation" aria-hidden="true">Toque nos pontos<svg viewBox="0 0 75 42"><path d="M66 3Q73 27 12 32m9-8-10 8 12 5"/></svg></div>
+      <div class="sample"><span></span> Exemplo educativo</div>
+    </div><a class="btn secondary" href="pages/explorar.html?produto=leite">Explorar a caixa de leite <svg class="icon"><use href="assets/icons.svg#arrow"/></svg></a></div>
+  </div></section>
+  <section id="explorar" class="catalog"><div class="wrap">
+    <p class="kicker"><svg class="icon"><use href="assets/icons.svg#grid"/></svg> Catálogo de embalagens</p>
+    <h2>Explore os rótulos</h2><p class="section-intro">Escolha um produto para descobrir o que a embalagem conta.</p>
+    <div id="product-grid" class="product-grid"></div>
+  </div></section>
+  <section id="aprender" class="learn"><div class="wrap learn-layout">
+    <div><p class="kicker"><svg class="icon"><use href="assets/icons.svg#book"/></svg> Aprenda</p><h2>Como ler a embalagem?</h2><p class="section-intro">Toque em um ponto da caixa ou escolha uma informação ao lado para começar.</p></div>
+    <div id="topic-list" class="topic-list"></div>
+  </div></section>
+  <section id="sobre"><div class="wrap about"><div><p class="kicker">Sobre o projeto</p><h2>Da universidade<br>ao supermercado.</h2></div><div><p>“Você entende o que consome?” é um projeto de extensão em Medicina Veterinária que ajuda consumidores a interpretar rótulos de produtos de origem animal.</p><p>As embalagens são exemplos fictícios para fins educativos. O conteúdo está em revisão para publicação.</p></div></div></section>
+</main>
+<footer><div class="wrap"><span>Você entende o que consome?</span><a href="#inicio">Voltar ao início ↑</a></div></footer>
+<dialog id="panel" aria-labelledby="panel-title"><div class="dialog-head"><h2 id="panel-title"></h2><button id="panel-close" class="icon-btn" aria-label="Fechar"><svg class="icon"><use href="assets/icons.svg#close"/></svg></button></div><div id="panel-body"></div></dialog>
+</body></html>

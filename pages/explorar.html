@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Explorar a caixa de leite | Você entende o que consome?</title>
+  <link rel="icon" href="../assets/favicon.svg"><link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/viewer.css">
+  <script type="module" src="../js/viewer.js"></script>
+</head>
+<body>
+<a class="skip" href="#principal">Pular para o conteúdo</a>
+<header><div class="wrap header-inner">
+  <a class="brand" href="../index.html"><svg aria-hidden="true"><use href="../assets/icons.svg#tag"/></svg><span>Você entende<br>o que consome?</span></a>
+  <a class="btn secondary" href="../index.html#explorar">← Catálogo</a>
+</div></header>
+<main class="wrap viewer-page" id="principal">
+  <p class="kicker">Explore os rótulos</p><h1>Caixa de <em>leite</em></h1>
+  <p class="section-intro">Escolha uma face e toque nos pontos para ler o rótulo.</p>
+  <div class="viewer-layout">
+    <section aria-label="Visualizador da caixa de leite">
+      <div class="toolbar" role="group" aria-label="Modo de visualização">
+        <button id="mode2" aria-pressed="true">Vista 2D</button><button id="mode3" aria-pressed="false">Explorar em 3D</button>
+      </div>
+      <div class="stage" id="stage">
+        <span class="stage-caption">Exemplo educativo</span>
+        <div id="flat" aria-hidden="true"><div class="fold"></div><canvas width="360" height="650"></canvas></div>
+        <div id="space"></div><div id="markers"></div>
+      </div>
+      <p id="status" role="status">Vista 2D. Use os botões para virar a caixa.</p>
+      <div id="faces" class="toolbar" role="group" aria-label="Faces da embalagem"></div>
+      <div id="zoom" class="toolbar" role="group" aria-label="Aproximação da caixa" hidden>
+        <button id="away" aria-label="Afastar">−</button><span id="scale"></span><button id="near" aria-label="Aproximar">+</button>
+      </div>
+    </section>
+    <section class="reader" aria-label="Informações do rótulo">
+      <article id="detail" hidden tabindex="-1" aria-labelledby="detail-title">
+        <p class="kicker" id="detail-face"></p><h2 id="detail-title"></h2><p id="definition"></p><strong>Na prática</strong><p id="tip"></p>
+        <a id="source" class="source" target="_blank" rel="noopener">Consultar fonte oficial ↗</a>
+        <button id="dismiss" class="btn secondary">Fechar explicação</button>
+      </article>
+      <h2 class="list-title">Informações da caixa</h2>
+      <div id="topic-buttons" class="topic-list"></div>
+    </section>
+  </div>
+</main></body></html>

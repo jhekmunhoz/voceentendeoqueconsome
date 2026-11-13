@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="tag" viewBox="0 0 44 44"><path d="m5 18 16-14 16 2 4 15-19 18a3 3 0 0 1-4 0L5 23a4 4 0 0 1 0-5Z" fill="#316549"/><path d="m11 21 10 11m-7-14 10 11m-6-14 10 11m-6-14 10 11" fill="none" stroke="#fff9e8" stroke-width="2.3"/><circle cx="31" cy="11" r="2.4" fill="#fff9e8"/></symbol>
+  <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+  <symbol id="book" viewBox="0 0 24 24"><path d="M12 6C9 4 6 4 3 5v14c3-1 6-1 9 1 3-2 6-2 9-1V5c-3-1-6-1-9 1Zm0 0v14"/></symbol>
+  <symbol id="search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.8"/><path d="m16 16 5 5"/></symbol>
+  <symbol id="access" viewBox="0 0 24 24"><circle cx="12" cy="4" r="1.8" fill="currentColor" stroke="none"/><path d="m4 8 8 1 8-1m-8 1v5m0 0-4 7m4-7 4 7"/></symbol>
+  <symbol id="leaf" viewBox="0 0 24 24"><path d="M4 18C0 7 12 4 21 3c-1 10-6 18-15 15m-3 3L16 9"/></symbol>
+  <symbol id="hand" viewBox="0 0 24 24"><path d="M8 13V6a2 2 0 0 1 4 0v5-2a1.8 1.8 0 0 1 3.5 0v2a1.7 1.7 0 0 1 3.3 0v1a1.6 1.6 0 0 1 3 0v3c0 4-2 7-6 7h-2c-2 0-3-1-4-2l-5-6a1.8 1.8 0 0 1 3-2l2 2"/></symbol>
+  <symbol id="menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="close" viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19"/></symbol>
+  <symbol id="grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+  <symbol id="info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></symbol>
+</svg>
