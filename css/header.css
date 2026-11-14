@@ -1,0 +1,86 @@
+/* Organização do cabeçalho principal e suas ferramentas. */
+header .header-inner {
+  width:min(1480px,calc(100% - 64px));
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:32px;
+  min-height:128px;
+  padding-block:12px;
+}
+header .brand {gap:12px;font-size:1.4rem;flex-shrink:0;}
+header .brand img {width:100px;height:100px;}
+header nav {justify-content:center;gap:18px;flex-wrap:nowrap;}
+header nav a {font-size:.88rem;white-space:nowrap;padding:8px 5px;}
+header .tools {
+  margin:0;
+  gap:8px;
+  padding-left:20px;
+  border-left:1px solid var(--line);
+}
+header .tools .icon-btn {height:44px;flex-shrink:0;}
+header .tools .tool-labeled {padding-inline:12px;font-size:.8rem;}
+
+@media(min-width:701px) and (max-width:1500px) {
+  header .header-inner {grid-template-columns:1fr auto;gap:10px 32px;}
+  header .brand {grid-column:1;grid-row:1;justify-self:start;}
+  header .tools {grid-column:2;grid-row:1;}
+  header nav {
+    grid-column:1/-1;
+    grid-row:2;
+    width:100%;
+    padding-top:8px;
+    border-top:1px solid var(--line);
+    gap:24px;
+  }
+}
+@media(max-width:700px) {
+  header .header-inner {
+    width:calc(100% - 32px);
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    padding-block:12px;
+  }
+  header .brand {font-size:1.15rem;gap:7px;}
+  header .brand img {width:78px;height:78px;}
+  header .tools {
+    width:100%;
+    justify-content:flex-end;
+    border-left:0;
+    border-top:1px solid var(--line);
+    padding:10px 0 0;
+    gap:6px;
+  }
+  header .tools .tool-labeled {font-size:.78rem;padding-inline:9px;}
+  header nav {padding:12px 16px;border:0;}
+  header nav.open {display:grid;justify-content:stretch;gap:6px;}
+  header nav a {width:100%;padding:10px 12px;}
+}
+
+/* Organização exclusiva de celulares; o cabeçalho de computador é preservado. */
+@media(max-width:700px){
+ header .header-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.45fr) 48px;gap:12px 10px;width:calc(100% - 28px);padding-block:14px;position:static;min-height:0}
+ header .brand{grid-column:1;grid-row:1;width:100%;min-width:0;gap:9px;padding:8px 10px;font-size:clamp(1.04rem,4.45vw,1.3rem);line-height:1.08;letter-spacing:-.025em;border-radius:16px;background:var(--brand-light)}
+ header .brand::before{display:none}
+ header .brand img{width:60px;height:60px}
+ header .brand span{min-width:0}
+ header .tools{display:contents}
+ header .tools #menu{display:grid;grid-column:2;grid-row:1;width:48px;height:48px;border:1px solid var(--line);border-radius:14px;background:var(--paper)}
+ header .tools #search-open,header .tools #faq-open,header .tools #access-open{width:100%;height:48px;min-width:0;border:1px solid var(--line);border-radius:12px;background:var(--paper);font-size:.78rem;padding:0 8px;gap:6px;white-space:normal}
+ header .tools #search-open{grid-column:1;grid-row:2;display:flex;justify-content:center;align-items:center}
+ header .tools #search-open::after{content:'Buscar'}
+ header .brand{grid-column:1/4}
+ header .tools #menu{grid-column:4}
+ header .tools #search-open{grid-column:1}
+ header .tools #faq-open{grid-column:2;grid-row:2}
+ header .tools #access-open{grid-column:3/5;grid-row:2}
+ header nav{top:100%;left:14px;right:14px;width:auto;max-height:70vh;overflow-y:auto;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:10px;box-shadow:0 10px 22px #17265a14;z-index:5}
+ header nav a{min-height:48px;white-space:normal;padding:12px}
+ header nav a[aria-current]::after{left:12px;right:auto;width:26px;bottom:5px}
+ header .tools button:focus-visible{outline:3px solid var(--brand-dark);outline-offset:3px}
+ .contrast header .brand,.contrast header .tools #menu{background:var(--cream);border:1px solid var(--ink)}
+}
+@media(max-width:350px){header .brand{padding:8px;gap:6px}header .brand img{width:48px;height:48px}}
+
+@media(min-width:701px) and (max-width:1100px){.text-large header nav,.text-largest header nav{flex-wrap:wrap;gap:8px 18px}}

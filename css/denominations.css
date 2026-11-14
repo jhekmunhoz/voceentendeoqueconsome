@@ -1,0 +1,68 @@
+.denominations-section{padding-block:48px 60px;border-top:1px solid var(--line)}
+.denominations-heading{display:grid;grid-template-columns:1fr 1fr;gap:12px 7%;align-items:end;margin-bottom:24px}
+.denominations-heading .kicker{grid-column:1/-1;margin:0}
+.denominations-heading h2{font-size:clamp(2.35rem,3.8vw,3.35rem)}
+.denominations-heading .section-intro{margin:0;max-width:500px}
+.type-note{margin-bottom:28px;border-block:1px solid var(--line);padding:0 4px}
+.type-note summary{cursor:pointer;padding:15px 0;min-height:48px;font-weight:600;color:var(--brand-dark);line-height:1.5}
+.type-note p{max-width:850px;line-height:1.65;color:var(--muted)}
+.type-note .source{display:inline-block;padding-block:10px;min-height:44px}
+.denominations-layout{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:36px;align-items:start}
+.denomination-browser label{display:block;font-size:.95rem;font-weight:700;line-height:1.5;margin-bottom:10px}
+#denomination-search{width:100%;min-height:50px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--paper);color:var(--ink);font:inherit;font-size:.95rem}
+.denomination-filters{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.denomination-filters button{min-height:44px;padding:8px 12px;background:transparent;border:1px solid var(--line);border-radius:22px;font-size:.78rem;line-height:1.3}
+.denomination-filters button[aria-pressed=true]{background:var(--brand-dark);border-color:var(--brand-dark);color:white}
+#denomination-status{font-size:.8rem;color:var(--muted);line-height:1.5;margin:16px 0 8px}
+.denomination-results{border-top:1px solid var(--line)}
+.denomination-option{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-height:49px;text-align:left;background:transparent;padding:12px;border-bottom:1px solid var(--line);font-size:.9rem;line-height:1.4}
+.denomination-option[aria-pressed=true]{background:var(--brand-light);font-weight:700;border-left:3px solid var(--brand-dark);padding-left:9px}
+.denomination-option:hover{background:var(--paper)}
+.denomination-option-arrow{color:var(--brand-dark);flex:none}
+#denomination-more{width:100%;margin-top:14px;font-size:.84rem}
+.denomination-detail{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:clamp(22px,3vw,34px);scroll-margin-top:22px}
+.denomination-detail>.kicker{font-size:.7rem;margin-bottom:10px}
+.denomination-detail h3{font-size:clamp(1.8rem,3vw,2.4rem);line-height:1.15;margin:0 0 20px;letter-spacing:-.035em}
+.denomination-example{padding:20px;border-left:3px solid var(--brand-dark);background:var(--brand-light);margin-bottom:24px}
+.denomination-example small{display:block;font-size:.73rem;line-height:1.6;color:var(--muted)}
+.denomination-example strong{display:block;margin:10px 0;font-size:1.2rem;line-height:1.4;color:var(--ink)}
+.denomination-detail h4{font:700 .92rem/1.5 var(--body);margin:0 0 6px}
+.denomination-detail p:not(.kicker){font-size:.94rem;line-height:1.65;color:var(--muted);margin:0 0 20px}
+.denomination-practical{padding-top:16px;border-top:1px solid var(--line)}
+.denomination-sources summary{cursor:pointer;min-height:44px;padding-block:12px;font-size:.85rem;color:var(--brand-dark);line-height:1.5}
+.denomination-sources>.source{display:block;min-height:44px;padding-block:10px;font-size:.82rem;line-height:1.5;overflow-wrap:anywhere}
+.denomination-back{display:none}
+.denomination-disclaimer{max-width:940px;margin:24px 0 0;font-size:.8rem;line-height:1.65;color:var(--muted)}
+.denomination-detail:focus-visible{outline:3px solid var(--brand-dark);outline-offset:4px}
+.contrast .denomination-detail,.contrast .denomination-example,.contrast .denomination-option[aria-pressed=true]{background:var(--cream);border-color:var(--ink)}
+@media(max-width:800px){.denominations-section{padding-block:32px 40px}.denominations-heading,.denominations-layout{grid-template-columns:1fr;gap:20px}.denominations-heading .section-intro{margin-top:0}.denomination-detail{padding:22px}.denomination-back{display:block;min-height:44px;margin-top:12px;padding:10px 0;background:transparent;font-size:.84rem;font-weight:600;color:var(--brand-dark)}}
+
+.denomination-detail .suggested-reading h3{font:700 .88rem/1.5 var(--body);letter-spacing:0;margin:0 0 10px}.denomination-detail .suggested-reading p{font-size:.85rem;margin:4px 0 14px}
+
+.type-examples{display:grid;gap:12px;margin-top:20px}.type-example{padding:14px 16px;border-left:3px solid var(--blue,#0051b8);background:rgba(255,255,255,.65)}.type-example p{margin:6px 0 0}.denomination-attribution{font-size:.85rem;line-height:1.6;margin-top:16px}
+
+/* Parcours de lecture : chercher, choisir, comprendre. */
+.denomination-browser{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:24px}
+.denomination-step{display:flex;align-items:center;gap:9px;font:700 .78rem/1.4 var(--body);color:var(--brand-dark);margin:0 0 18px}
+.denomination-step>span{display:grid;place-items:center;width:25px;height:25px;flex:none;border-radius:50%;background:var(--brand-dark);color:white;font-size:.74rem}
+.denomination-categories{margin-top:14px;border:1px solid var(--line);border-radius:12px;padding:0 14px}
+.denomination-categories summary{cursor:pointer;min-height:54px;padding:12px 0;font-size:.85rem;font-weight:600;color:var(--ink)}
+#denomination-category-label{display:block;margin:4px 0 0 18px;font-size:.75rem;font-weight:400;color:var(--muted)}
+.denomination-filters{margin:0 0 14px;gap:8px}
+.denomination-category-help{font-size:.8rem;line-height:1.55;color:var(--muted);margin:12px 0 24px}
+.denomination-results{border-top:0;display:grid;gap:8px}
+.denomination-option{border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-height:65px;transition:background .18s,border-color .18s}
+.denomination-option-label{display:grid;gap:3px}.denomination-option-label strong{font-size:.9rem;font-weight:600}.denomination-option-label small{font-size:.7rem;color:var(--muted);font-weight:400}
+.denomination-option[aria-pressed=true]{border:1px solid var(--brand-dark);padding-left:14px}
+.denomination-option-arrow{display:grid;place-items:center;border:1px solid var(--line);width:28px;height:28px;border-radius:50%;font-size:.85rem}
+.denomination-option[aria-pressed=true] .denomination-option-arrow{background:var(--brand-dark);color:white;border-color:var(--brand-dark)}
+.denomination-detail{border-radius:24px;border-top:4px solid var(--brand-dark)}
+.denomination-detail>.denomination-step{font-size:.78rem;margin-bottom:26px;color:var(--brand-dark)}
+.denomination-example{border-left:0;border-radius:10px;padding:12px 16px;margin-bottom:24px}
+.denomination-example small:first-child{font-weight:700;color:var(--brand-dark);margin-bottom:3px}
+.denomination-practical{border:0;border-radius:12px;background:var(--cream);padding:16px;margin-bottom:10px}
+.denomination-practical p:last-child{margin-bottom:0}
+.type-note{border:1px solid var(--line);border-radius:14px;padding:0 18px;background:var(--paper)}
+@media(min-width:801px){.denomination-detail{position:sticky;top:24px}}
+@media(max-width:800px){.denomination-browser{padding:18px}.denominations-layout{gap:18px}.denomination-detail{position:static}}
+@media(prefers-reduced-motion:reduce){.denomination-option{transition:none}}

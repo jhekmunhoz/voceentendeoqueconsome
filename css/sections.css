@@ -1,0 +1,13 @@
+/* Fundos leves delimitam os capítulos sem competir com o conteúdo. */
+:root{
+ --section-blue-soft:color-mix(in srgb,var(--brand) 9%,var(--cream));
+ --section-blue-mid:color-mix(in srgb,var(--brand) 15%,var(--cream));
+ --section-blue-mist:color-mix(in srgb,var(--brand-dark) 6%,var(--paper));
+}
+#explorar{background:linear-gradient(120deg,color-mix(in srgb,var(--brand) 4%,var(--cream)),var(--cream) 80%);border-block:1px solid var(--line)}
+#aprender{background:radial-gradient(ellipse at 100% 15%,var(--section-blue-soft),transparent 65%),linear-gradient(180deg,var(--paper),var(--cream));border-bottom:1px solid var(--line)}
+#denominacoes{background:radial-gradient(ellipse at 0 50%,var(--section-blue-mid),transparent 72%),linear-gradient(135deg,var(--section-blue-mist),var(--cream) 75%);border-top:0;border-bottom:1px solid var(--line)}
+#podcast{background:linear-gradient(180deg,var(--cream),var(--paper));padding-block:48px}
+#sobre{background:linear-gradient(125deg,var(--paper) 15%,var(--cream) 60%,var(--section-blue-soft));border-top:1px solid var(--line)}
+.contrast #explorar,.contrast #aprender,.contrast #denominacoes,.contrast #podcast,.contrast #sobre{background:var(--cream)}
+@media(max-width:700px){#podcast{padding-block:32px}}

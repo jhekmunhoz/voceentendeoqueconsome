@@ -5,44 +5,120 @@
   <meta name="theme-color" content="#faf8ef">
   <meta name="description" content="Explore embalagens ilustradas e descubra o que significam as informações dos rótulos de produtos de origem animal.">
   <title>Você entende o que consome? | Início</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="css/style.css"><script type="module" src="js/main.js"></script>
+  <link rel="icon" href="assets/brand/favicon.png"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/header.css"><script type="module" src="js/main.js"></script>
+  <link rel="stylesheet" href="css/denominations.css">
+  <link rel="stylesheet" href="css/sections.css">
 </head>
 <body>
 <a class="skip" href="#principal">Pular para o conteúdo</a>
 <header><div class="wrap header-inner">
-  <a class="brand" href="#inicio" aria-label="Você entende o que consome? Início"><svg aria-hidden="true"><use href="assets/icons.svg#tag"/></svg><span>Você entende<br>o que consome?</span></a>
-  <nav id="navigation" aria-label="Navegação principal"><a href="#inicio" aria-current="location">Início</a><a href="#explorar">Explore os rótulos</a><a href="#aprender">Aprenda</a><a href="#sobre">Sobre o projeto</a></nav>
-  <div class="tools"><button id="search-open" class="icon-btn" aria-label="Buscar assuntos"><svg class="icon"><use href="assets/icons.svg#search"/></svg></button><button id="access-open" class="icon-btn" aria-label="Ajustar acessibilidade"><svg class="icon"><use href="assets/icons.svg#access"/></svg></button><button id="menu" class="icon-btn" aria-label="Menu de navegação" aria-expanded="false" aria-controls="navigation"><svg class="icon"><use href="assets/icons.svg#menu"/></svg></button></div>
+  <a class="brand" href="#inicio" aria-label="Você entende o que consome? Início"><img src="assets/brand/logo.webp" alt="" width="72" height="72"><span>Você entende<br>o que consome?</span></a>
+
+  <nav id="navigation" aria-label="Navegação principal"><a href="#inicio" aria-current="location">Início</a><a href="#explorar">Explore os rótulos</a><a href="#aprender">Aprenda</a><a href="#denominacoes">Denominações</a><a href="#sobre">Sobre o projeto</a><a id="podcast-open" href="#podcast"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#podcast"/></svg><span>Podcast</span></a></nav>
+  <div class="tools" role="group" aria-label="Busca e ferramentas de leitura">
+    <button id="search-open" class="icon-btn" aria-label="Buscar assuntos"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#search"/></svg></button>
+    <button id="faq-open" class="icon-btn tool-labeled" aria-label="Perguntas frequentes"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#help"/></svg><span>FAQ</span></button>
+    <button id="access-open" class="icon-btn tool-labeled" aria-label="Ajustar acessibilidade"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#access"/></svg><span>Acessibilidade</span></button>
+    <button id="menu" class="icon-btn" aria-label="Menu de navegação" aria-expanded="false" aria-controls="navigation"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#menu"/></svg></button>
+  </div>
 </div></header>
 <main id="principal">
   <section class="hero" id="inicio" aria-labelledby="hero-title"><div class="wrap hero-inner">
     <div class="lead"><p class="kicker"><svg class="icon"><use href="assets/icons.svg#leaf"/></svg> Educação alimentar</p>
       <h1 id="hero-title">Você sabe o que<br>está <em>consumindo?</em></h1>
       <p class="intro">Explore as embalagens e descubra o que cada informação do rótulo significa!</p>
-      <div class="actions"><a class="btn primary" href="#explorar">Explorar embalagens <svg class="icon"><use href="assets/icons.svg#arrow"/></svg></a><a class="btn secondary" href="#aprender"><svg class="icon"><use href="assets/icons.svg#book"/></svg> Como funciona</a></div>
+      <div class="actions"><a class="btn primary" href="#explorar">Explorar embalagens <svg class="icon"><use href="assets/icons.svg#arrow"/></svg></a><a class="btn secondary" href="#aprender"><svg class="icon"><use href="assets/icons.svg#book"/></svg> Entenda os símbolos</a></div>
     </div>
     <div class="exhibit"><div class="scene" aria-label="Caixa de leite com três pontos para explorar">
+      <button id="hero-previous" class="hero-arrow hero-previous" aria-label="Produto anterior" disabled>‹</button>
+      <button id="hero-next" class="hero-arrow hero-next" aria-label="Próximo produto" disabled>›</button>
       <div class="sun"></div><div class="orbit"></div>
-      <svg class="sprig" viewBox="0 0 65 68" aria-hidden="true"><g fill="none" stroke="#65845d" stroke-width="2.1" stroke-linecap="round"><path d="M8 62Q27 31 49 8M18 48Q1 30 13 20q13 12 8 23m8-11q-6-19 6-26 8 14-3 23m3-6q7-19 24-17-4 15-21 18M21 45q13-17 29-11-7 14-27 14"/></g></svg>
+      <svg class="sprig" viewBox="0 0 65 68" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"><path d="M8 62Q27 31 49 8M18 48Q1 30 13 20q13 12 8 23m8-11q-6-19 6-26 8 14-3 23m3-6q7-19 24-17-4 15-21 18M21 45q13-17 29-11-7 14-27 14"/></g></svg>
       <span class="spark s1" aria-hidden="true">✧</span><span class="spark s2" aria-hidden="true">✧</span>
-      <div class="carton"><img src="assets/images/leite-destaque.webp" alt="Caixa ilustrada de leite integral UHT, com tampa verde e uma paisagem de pasto no rótulo." fetchpriority="high">
-        <button class="pin p1" data-topic="nome" aria-label="Explorar denominação do produto">+</button><button class="pin p2" data-topic="tabela" aria-label="Explorar informação nutricional">+</button><button class="pin p3" data-topic="volume" aria-label="Explorar quantidade de produto">+</button>
+      <div class="carton"><img src="assets/images/leite-inicio-transparente.webp" alt="Caixa ilustrativa azul de leite UHT integral com tampa branca e a identidade do projeto." width="733" height="1100" fetchpriority="high">
+        <button class="pin p1" data-topic="nome" aria-label="Explorar denominação do produto">+</button><button class="pin p2" data-topic="inspecao" aria-label="Explorar inspeção sanitária">+</button><button class="pin p3" data-topic="volume" aria-label="Explorar quantidade de produto">+</button>
       </div>
-      <div class="annotation" aria-hidden="true">Toque nos pontos<svg viewBox="0 0 75 42"><path d="M66 3Q73 27 12 32m9-8-10 8 12 5"/></svg></div>
       <div class="sample"><span></span> Exemplo educativo</div>
-    </div><a class="btn secondary" href="pages/explorar.html?produto=leite">Explorar a caixa de leite <svg class="icon"><use href="assets/icons.svg#arrow"/></svg></a></div>
+    </div>
+      <p class="annotation">Toque no <span class="hint-point" aria-label="símbolo de mais">+</span> da embalagem para saber mais.</p>
+      <p id="hero-status" class="visually-hidden" role="status">Leite, produto 1 de 6</p>
+      <a id="hero-explore" class="btn secondary" href="pages/explorar.html?produto=leite"><span>Explorar a caixa de leite</span> <svg class="icon"><use href="assets/icons.svg#arrow"/></svg></a>
+    </div>
   </div></section>
   <section id="explorar" class="catalog"><div class="wrap">
     <p class="kicker"><svg class="icon"><use href="assets/icons.svg#grid"/></svg> Catálogo de embalagens</p>
     <h2>Explore os rótulos</h2><p class="section-intro">Escolha um produto para descobrir o que a embalagem conta.</p>
     <div id="product-grid" class="product-grid"></div>
   </div></section>
-  <section id="aprender" class="learn"><div class="wrap learn-layout">
-    <div><p class="kicker"><svg class="icon"><use href="assets/icons.svg#book"/></svg> Aprenda</p><h2>Como ler a embalagem?</h2><p class="section-intro">Toque em um ponto da caixa ou escolha uma informação ao lado para começar.</p></div>
-    <div id="topic-list" class="topic-list"></div>
+  <section id="aprender" class="learn"><div class="wrap symbol-section">
+    <div class="symbol-heading"><p class="kicker"><svg class="icon"><use href="assets/icons.svg#book"/></svg> Aprenda a reconhecer</p><h2>O que esses símbolos significam?</h2><p class="section-intro">Você já viu algum deles no supermercado? Veja a imagem e descubra o que ela informa sobre o alimento.</p></div>
+    <div class="symbol-navigation" role="group" aria-label="Navegar pelos símbolos">
+      <span>Deslize ou use as setas para ver mais símbolos.</span>
+      <button id="symbol-previous" class="icon-btn" aria-label="Símbolos anteriores" aria-controls="symbol-grid">←</button>
+      <button id="symbol-next" class="icon-btn" aria-label="Próximos símbolos" aria-controls="symbol-grid">→</button>
+    </div>
+    <div id="symbol-grid" class="symbol-grid" tabindex="0" role="region" aria-label="Símbolos das embalagens, lista com rolagem horizontal"></div>
+    <p class="symbol-disclaimer">Os exemplos são para reconhecimento educativo e não certificam nossas embalagens fictícias. A presença e o formato dos símbolos dependem do produto e do órgão responsável. Conteúdo em revisão antes da publicação.</p>
   </div></section>
-  <section id="sobre"><div class="wrap about"><div><p class="kicker">Sobre o projeto</p><h2>Da universidade<br>ao supermercado.</h2></div><div><p>“Você entende o que consome?” é um projeto de extensão em Medicina Veterinária que ajuda consumidores a interpretar rótulos de produtos de origem animal.</p><p>As embalagens são exemplos fictícios para fins educativos. O conteúdo está em revisão para publicação.</p></div></div></section>
+  <section id="denominacoes" class="denominations-section" aria-labelledby="denominations-title"><div class="wrap">
+    <div class="denominations-heading"><p class="kicker">Por trás do nome</p><h2 id="denominations-title">Parece igual.<br>Mas tem o mesmo nome?</h2><p class="section-intro">Mussarela, bebida láctea, apresuntado… O nome do alimento conta sobre sua composição e seu modo de produção. Escolha um produto para descobrir.</p></div>
+    <details class="type-note"><summary>E quando aparece a palavra “tipo”?</summary><div id="type-explanation"></div></details>
+    <div class="denominations-layout">
+      <div class="denomination-browser">
+        <p class="denomination-step"><span>1</span> Encontre um nome</p><label for="denomination-search">O que está escrito na embalagem?</label>
+        <input id="denomination-search" type="search" placeholder="Ex.: mussarela, leite em pó, bacon" autocomplete="off" aria-controls="denomination-results">
+        <details class="denomination-categories"><summary>Ou explore por categoria <span id="denomination-category-label">Todos os temas</span></summary><div id="denomination-filters" class="denomination-filters" role="group" aria-label="Filtrar por categoria de alimento"></div></details><p id="denomination-category-help" class="denomination-category-help">Busque um nome ou escolha uma categoria para começar.</p><p class="denomination-step"><span>2</span> Toque em um resultado</p>
+        <p id="denomination-status" role="status"></p>
+        <div id="denomination-results" class="denomination-results" role="group" aria-label="Escolha uma denominação"></div>
+        <button id="denomination-more" class="btn secondary" type="button" aria-controls="denomination-results">Mostrar mais nomes ↓</button>
+      </div>
+      <article id="denomination-detail" class="denomination-detail" tabindex="-1" aria-labelledby="denomination-selected-title"></article>
+    </div>
+    <p class="denomination-disclaimer">Catálogo em expansão: produtos dos cinco grandes grupos de alimentos de origem animal, ingredientes e termos de processamento. Em “Pode ter origem animal?”, a origem do ingrediente depende da fabricação e pode precisar de confirmação com o fabricante. Em “Receita variável”, a presença de ingredientes de origem animal depende da composição do alimento. Não reúne todas as variedades, cortes e denominações existentes. Os resumos são educativos e estão em revisão antes da publicação; consulte o rótulo completo e as normas aplicáveis.</p>
+  </div></section>
+  <section id="podcast" class="podcast-section" aria-labelledby="podcast-title"><div class="wrap podcast-invite">
+    <div>
+      <p class="kicker"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#podcast"/></svg> Continue a conversa</p>
+      <h2 id="podcast-title">Ainda ficou<br>com dúvida?</h2>
+      <p class="section-intro">Quer saber mais sobre o que você consome? Escute nosso podcast no Spotify e leve essa conversa para o seu dia a dia, com mais explicações sobre os rótulos dos alimentos.</p>
+    </div>
+    <div class="podcast-listen">
+      <a class="podcast-bar" data-podcast-link href="#podcast" aria-describedby="podcast-availability">
+        <img class="podcast-logo" src="assets/brand/logo.webp" alt="" width="88" height="88" loading="lazy">
+        <span class="podcast-bar-copy"><strong>Você entende<br>o que consome?</strong><small>Ouça nosso podcast no Spotify</small></span>
+        <span class="podcast-play" aria-hidden="true">▶</span>
+      </a>
+      <p id="podcast-availability" hidden>Em breve · os episódios estão em preparação.</p>
+    </div>
+  </div></section>
+  <section id="sobre"><div class="wrap about">
+    <div><p class="kicker">Sobre o projeto</p><h2>Da universidade<br>ao supermercado.</h2><img class="institution-logo" src="assets/brand/hospital-veterinario-unifil.webp" alt="Hospital Veterinário UniFil" loading="lazy">
+      <button id="research-open" class="research-card" aria-haspopup="dialog" aria-controls="panel">
+        <span class="kicker">Pesquisa exploratória · 34 participantes</span>
+        <span class="research-card-title">O que a nossa pesquisa revelou?</span>
+        <span class="research-card-description">Conheça as dificuldades e dúvidas que inspiraram as ações do projeto.</span>
+        <span class="research-card-action">Ver resultados <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"/></svg></span>
+      </button>
+    </div>
+    <div>
+      <p>Você sabe o que realmente está levando para casa quando escolhe um alimento?</p>
+      <p>O <strong>“Você entende o que consome?”</strong> é um projeto de extensão universitária que conta com a participação de alunas do 4º ano de Medicina Veterinária da <strong>UniFil — Centro Universitário Filadélfia</strong>, em Londrina (PR), como parte de uma disciplina ministrada pela professora <strong>Cássia Valeria Hungaro Yoshi</strong>. Como contribuição ao projeto, as alunas criaram este site e o podcast educativo.</p>
+      <p>Nossa proposta é aproximar o conhecimento científico do cotidiano dos consumidores, tornando as informações presentes nos rótulos dos alimentos de origem animal mais acessíveis e fáceis de compreender.</p>
+      <p>Por meio de embalagens interativas e conteúdos educativos, buscamos ajudar você a identificar informações importantes sobre inspeção sanitária, validade, conservação, ingredientes e composição nutricional.</p>
+      <p><strong>Alunas participantes e responsáveis pela criação do site e do podcast:</strong></p>
+      <ul class="project-team">
+        <li>Jhennifer Kotaka Munhoz</li>
+        <li>Maria Eduarda Ollier Shime</li>
+        <li>Sthefanny Carolina Rosseto</li>
+      </ul>
+      <p><em>As embalagens apresentadas são exemplos fictícios, desenvolvidos exclusivamente para fins educativos. O conteúdo está em revisão para publicação.</em></p>
+    </div>
+  </div></section>
 </main>
-<footer><div class="wrap"><span>Você entende o que consome?</span><a href="#inicio">Voltar ao início ↑</a></div></footer>
+<footer><div class="wrap footer-layout">
+  <span>Você entende o que consome?</span>
+  <button id="veterinary-open" class="veterinary-link" aria-haspopup="dialog" aria-controls="panel"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#food-health"/></svg><span>Entenda a atuação do médico-veterinário de alimentos</span></button>
+  <a href="#inicio">Voltar ao início ↑</a>
+</div></footer>
 <dialog id="panel" aria-labelledby="panel-title"><div class="dialog-head"><h2 id="panel-title"></h2><button id="panel-close" class="icon-btn" aria-label="Fechar"><svg class="icon"><use href="assets/icons.svg#close"/></svg></button></div><div id="panel-body"></div></dialog>
 </body></html>

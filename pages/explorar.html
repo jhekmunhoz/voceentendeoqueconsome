@@ -3,42 +3,88 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Explorar a caixa de leite | Você entende o que consome?</title>
-  <link rel="icon" href="../assets/favicon.svg"><link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/viewer.css">
+  <link rel="icon" href="../assets/brand/favicon.png"><link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/viewer.css">
   <script type="module" src="../js/viewer.js"></script>
 </head>
 <body>
 <a class="skip" href="#principal">Pular para o conteúdo</a>
 <header><div class="wrap header-inner">
-  <a class="brand" href="../index.html"><svg aria-hidden="true"><use href="../assets/icons.svg#tag"/></svg><span>Você entende<br>o que consome?</span></a>
+  <a class="brand" href="../index.html"><img src="../assets/brand/logo.webp" alt="" width="72" height="72"><span>Você entende<br>o que consome?</span></a>
   <a class="btn secondary" href="../index.html#explorar">← Catálogo</a>
 </div></header>
 <main class="wrap viewer-page" id="principal">
-  <p class="kicker">Explore os rótulos</p><h1>Caixa de <em>leite</em></h1>
-  <p class="section-intro">Escolha uma face e toque nos pontos para ler o rótulo.</p>
+  <div class="explorer-heading">
+    <div>
+      <p class="kicker">Explore os rótulos</p>
+      <h1>Descubra o que o rótulo conta.</h1>
+      <p class="section-intro">Escolha uma embalagem e toque nos pontos. Você também pode começar por uma pergunta em “O que você quer descobrir?”.</p>
+    </div>
+
+  <details class="illustrative-details">
+    <summary>Exemplo educativo · em revisão</summary>
+    <p>Artes ilustrativas fornecidas pela equipe. Selos, números, datas e valores impressos são demonstrativos e aguardam revisão. As explicações e imagens de referência serão revisadas separadamente.</p>
+  </details>
+  </div>
   <div class="viewer-layout">
-    <section aria-label="Visualizador da caixa de leite">
+    <section aria-label="Visualizador de embalagens">
       <div class="toolbar" role="group" aria-label="Modo de visualização">
         <button id="mode2" aria-pressed="true">Vista 2D</button><button id="mode3" aria-pressed="false">Explorar em 3D</button>
       </div>
+    <div class="product-picker">
+      <div class="product-stepper" role="group" aria-label="Trocar embalagem">
+        <button id="product-previous" aria-label="Produto anterior" disabled>‹</button>
+        <span id="current-product" role="status">Carregando…</span>
+        <button id="product-next" aria-label="Próximo produto" disabled>›</button>
+      </div>
+    </div>
       <div class="stage" id="stage">
         <span class="stage-caption">Exemplo educativo</span>
         <div id="flat" aria-hidden="true"><div class="fold"></div><canvas width="360" height="650"></canvas></div>
         <div id="space"></div><div id="markers"></div>
+        <div id="zoom" class="zoom-rail" role="group" aria-label="Zoom da embalagem" hidden>
+          <label for="zoom-range">Zoom</label>
+          <span aria-hidden="true" class="zoom-sign">+</span>
+          <input id="zoom-range" type="range" min="75" max="300" step="1" value="100" orient="vertical" aria-label="Ampliar ou reduzir a embalagem" aria-valuetext="100%">
+          <span aria-hidden="true" class="zoom-sign">−</span>
+          <output id="scale" for="zoom-range">100%</output>
+          <button id="reset-zoom" aria-label="Restaurar zoom para 100%" title="Restaurar zoom">↺</button>
+        </div>
       </div>
       <p id="status" role="status">Vista 2D. Use os botões para virar a caixa.</p>
-      <div id="faces" class="toolbar" role="group" aria-label="Faces da embalagem"></div>
-      <div id="zoom" class="toolbar" role="group" aria-label="Aproximação da caixa" hidden>
-        <button id="away" aria-label="Afastar">−</button><span id="scale"></span><button id="near" aria-label="Aproximar">+</button>
+      <div class="viewer-controls">
+        <div class="area-controls">
+          <p class="control-label">Áreas do rótulo</p>
+          <div id="faces" class="toolbar" role="group" aria-label="Áreas do rótulo"></div>
+        </div>
       </div>
     </section>
     <section class="reader" aria-label="Informações do rótulo">
       <article id="detail" hidden tabindex="-1" aria-labelledby="detail-title">
-        <p class="kicker" id="detail-face"></p><h2 id="detail-title"></h2><p id="definition"></p><strong>Na prática</strong><p id="tip"></p>
+        <p class="kicker" id="detail-face"></p><h2 id="detail-title"></h2>
+        <div id="find-label" hidden><strong>1. Encontre no rótulo</strong><p id="find-instruction"></p></div>
+        <figure class="label-example"><canvas id="label-enlargement" aria-label="Ampliação ilustrativa da área selecionada do rótulo"></canvas><figcaption>Arte demonstrativa · informações impressas em revisão</figcaption></figure>
+        <strong id="definition-label">Entenda</strong><p id="definition"></p><strong id="practice-label">Na prática</strong><p id="tip"></p>
+        <div id="nutrition-explanation"></div>
         <a id="source" class="source" target="_blank" rel="noopener">Consultar fonte oficial ↗</a>
+        <div id="topic-reading"></div>
         <button id="dismiss" class="btn secondary">Fechar explicação</button>
       </article>
-      <h2 class="list-title">Informações da caixa</h2>
+      <h2 class="list-title" id="learning-title">Informações da embalagem</h2>
+      <p id="learning-intro" hidden>Escolha uma pergunta ou toque nos pontos da embalagem. Você pode aprender em 2D ou 3D.</p>
       <div id="topic-buttons" class="topic-list"></div>
     </section>
   </div>
+  <section class="reference-sources" aria-labelledby="references-title">
+    <h2 id="references-title">Referências dos rótulos</h2>
+    <p id="milk-reference">A embalagem e sua imagem 2D são artes ilustrativas. As informações impressas aguardam revisão.</p>
+    <ul>
+      <li><strong>SIF</strong> — as artes ilustrativas não comprovam certificação sanitária. <a href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-animal/empresario/arquivos/Memo13modelosdecarimbos.pdf/view" target="_blank" rel="noopener">Modelos oficiais do MAPA</a>.</li>
+      <li><strong>Paraná</strong> — o serviço estadual é o SIP/POA da Adapar. Arte pendente de revisão. <a href="https://www.adapar.pr.gov.br/Pagina/Registro-de-Estabelecimentos-Industriais-de-Produtos-de-Origem-Animal" target="_blank" rel="noopener">Orientações da Adapar</a>.</li>
+      <li><strong>Londrina</strong> — a referência municipal é o SIM-LD. Arte oficial pendente de obtenção e revisão. <a href="https://portal.londrina.pr.gov.br/servico-de-inspecao-municipal" target="_blank" rel="noopener">Serviço da Prefeitura de Londrina</a>.</li>
+      <li><strong>SISBI-POA</strong> — a marca se relaciona ao reconhecimento de equivalência dos serviços de inspeção. Sua aplicação exige conferir o serviço, estabelecimento e produto. <a href="https://www.gov.br/agricultura/pt-br/assuntos/defesa-agropecuaria/suasa/sisbi-1/legislacao/manual-de-identidade-visual-da-marca-sisbi.pdf/view" target="_blank" rel="noopener">Manual visual do MAPA</a>.</li>
+      <li><strong>Tabela nutricional e lupa</strong> — a aplicação depende do produto e das regras pertinentes. A lupa aguarda seleção e revisão do exemplo. <a href="https://www.gov.br/anvisa/pt-br/assuntos/alimentos/rotulagem/rotulagem-nutricional" target="_blank" rel="noopener">Modelos oficiais da Anvisa</a>.</li>
+    </ul>
+    <p>Fontes consultadas em 13/11/2026. Aplicação gráfica e conteúdo em revisão antes da publicação.</p>
+    <div id="reference-readings"></div>
+  </section>
 </main></body></html>

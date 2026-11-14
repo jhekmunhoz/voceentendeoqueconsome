@@ -1,0 +1,3 @@
+# Preservar os documentos oficiais e modelos 3D sem conversão de finais de linha.
+*.pdf binary
+*.glb binary
